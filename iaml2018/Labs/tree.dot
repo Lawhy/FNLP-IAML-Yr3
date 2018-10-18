@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="CheckingAccount_none <= 0.5\nentropy = 0.888\nsamples = 900\nvalue = [275, 625]\nclass = bad", fillcolor="#399de58f"] ;
+1 [label="Duration <= 11.5\nentropy = 0.985\nsamples = 544\nvalue = [233, 311]\nclass = bad", fillcolor="#399de540"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="CreditHistory_ok_at_this_bank <= 0.5\nentropy = 0.735\nsamples = 92\nvalue = [19, 73]\nclass = bad", fillcolor="#399de5bd"] ;
+1 -> 2 ;
+3 [label="entropy = 0.641\nsamples = 86\nvalue = [14, 72]\nclass = bad", fillcolor="#399de5cd"] ;
+2 -> 3 ;
+4 [label="entropy = 0.65\nsamples = 6\nvalue = [5, 1]\nclass = good", fillcolor="#e58139cc"] ;
+2 -> 4 ;
+5 [label="CheckingAccount_<0 <= 0.5\nentropy = 0.998\nsamples = 452\nvalue = [214, 238]\nclass = bad", fillcolor="#399de51a"] ;
+1 -> 5 ;
+6 [label="entropy = 0.957\nsamples = 243\nvalue = [92, 151]\nclass = bad", fillcolor="#399de564"] ;
+5 -> 6 ;
+7 [label="entropy = 0.98\nsamples = 209\nvalue = [122, 87]\nclass = good", fillcolor="#e5813949"] ;
+5 -> 7 ;
+8 [label="OtherPlans_none <= 0.5\nentropy = 0.524\nsamples = 356\nvalue = [42, 314]\nclass = bad", fillcolor="#399de5dd"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="Age <= 44.5\nentropy = 0.892\nsamples = 55\nvalue = [17, 38]\nclass = bad", fillcolor="#399de58d"] ;
+8 -> 9 ;
+10 [label="entropy = 0.962\nsamples = 44\nvalue = [17, 27]\nclass = bad", fillcolor="#399de55e"] ;
+9 -> 10 ;
+11 [label="entropy = 0.0\nsamples = 11\nvalue = [0, 11]\nclass = bad", fillcolor="#399de5ff"] ;
+9 -> 11 ;
+12 [label="CreditHistory_critical <= 0.5\nentropy = 0.413\nsamples = 301\nvalue = [25, 276]\nclass = bad", fillcolor="#399de5e8"] ;
+8 -> 12 ;
+13 [label="entropy = 0.553\nsamples = 179\nvalue = [23, 156]\nclass = bad", fillcolor="#399de5d9"] ;
+12 -> 13 ;
+14 [label="entropy = 0.121\nsamples = 122\nvalue = [2, 120]\nclass = bad", fillcolor="#399de5fb"] ;
+12 -> 14 ;
+}
